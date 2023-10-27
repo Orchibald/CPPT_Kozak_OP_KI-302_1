@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Office Center Management</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Office Center Management</h1>
+    
+    <div id="officeCenterDetails">
+    </div>
+
+    <form id="officeCenterForm">
+        <label for="address">Адреса:</label>
+        <input type="text" id="address" required><br>
+        
+        <label for="floors">Кількість поверхів:</label>
+        <input type="number" id="floors" required><br>
+        
+        <label for="officeSpace">Площа офісу (кв. м):</label>
+        <input type="number" id="officeSpace" required><br>
+        
+        <label for="meetingRoom">Маєте кімнату для зборів:</label>
+        <input type="checkbox" id="meetingRoom"><br>
+        
+        <label for="desks">Кількість робочих столів:</label>
+        <input type="number" id="desks" required><br>
+        
+        <label for="projector">Маєте проектор:</label>
+        <input type="checkbox" id="projector"><br>
+        
+        <label for="whiteboard">Маєте маркерну дошку:</label>
+        <input type="checkbox" id="whiteboard"><br>
+        
+        <button type="button" onclick="updateOfficeCenter()">Оновити деталі</button>
+    </form>
+
+    <!-- <script>
+        class House {
+            constructor() {
+                this.address = "No information";
+                this.numberOfFloors = 0;
+                this.hasGarden = false;
+            }
+
+            setAddress(address) {
+                this.address = address;
+            }
+
+            setNumberOfFloors(numberOfFloors) {
+                this.numberOfFloors = numberOfFloors;
+            }
+
+            setHasGarden(hasGarden) {
+                this.hasGarden = hasGarden;
+            }
+        }
+
+        class OfficeCenter extends House {
+            constructor(address, numberOfFloors, officeSpace, hasMeetingRoom, numberOfDesks, hasProjector, hasWhiteboard) {
+                super();
+                this.officeSpace = officeSpace;
+                this.hasMeetingRoom = hasMeetingRoom;
+                this.numberOfDesks = numberOfDesks;
+                this.hasProjector = hasProjector;
+                this.hasWhiteboard = hasWhiteboard;
+            }
+
+            setOfficeSpace(officeSpace) {
+                this.officeSpace = officeSpace;
+            }
+
+            equipMeetingRoom(projector, whiteboard) {
+                this.hasMeetingRoom = true;
+                this.hasProjector = projector;
+                this.hasWhiteboard = whiteboard;
+            }
+
+            addDesks(desksToAdd) {
+                this.numberOfDesks += desksToAdd;
+            }
+
+            getNumberOfDesks() {
+                return this.numberOfDesks;
+            }
+
+            hasProjector() {
+                return this.hasProjector;
+            }
+
+            hasWhiteboard() {
+                return this.hasWhiteboard;
+            }
+        }
+
+        let officeCenter = new OfficeCenter("", 0, 0, false, 0, false, false);
+
+        function updateOfficeCenter() {
+            let address = document.getElementById("address").value;
+            let floors = parseInt(document.getElementById("floors").value);
+            let officeSpace = parseInt(document.getElementById("officeSpace").value);
+            let meetingRoom = document.getElementById("meetingRoom").checked;
+            let desks = parseInt(document.getElementById("desks").value);
+            let projector = document.getElementById("projector").checked;
+            let whiteboard = document.getElementById("whiteboard").checked;
+
+            officeCenter.setAddress(address);
+            officeCenter.setNumberOfFloors(floors);
+            officeCenter.setOfficeSpace(officeSpace);
+            officeCenter.equipMeetingRoom(projector, whiteboard);
+            officeCenter.addDesks(desks);
+
+            let officeCenterDetails = document.getElementById("officeCenterDetails");
+            officeCenterDetails.innerHTML = "<h2>Деталі офісного центру</h2>";
+            officeCenterDetails.innerHTML += "<p>Адреса: " + officeCenter.address + "</p>";
+            officeCenterDetails.innerHTML += "<p>Кількість поверхів: " + officeCenter.numberOfFloors + "</p>";
+            officeCenterDetails.innerHTML += "<p>Площа офісу (кв. м): " + officeCenter.officeSpace + "</p>";
+            officeCenterDetails.innerHTML += "<p>Має кімнату для зборів: " + (officeCenter.hasMeetingRoom ? "Так" : "Ні") + "</p>";
+            officeCenterDetails.innerHTML += "<p>Кількість робочих столів: " + officeCenter.getNumberOfDesks() + "</p>";
+            officeCenterDetails.innerHTML += "<p>Має проектор: " + (officeCenter.hasProjector() ? "Так" : "Ні") + "</p>";
+            officeCenterDetails.innerHTML += "<p>Має маркерну дошку: " + (officeCenter.hasWhiteboard() ? "Так" : "Ні") + "</p>";
+        }
+    </script> -->
+</body>
+</html>
